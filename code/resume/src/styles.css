@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.full-screen-section {
+    height: 100vh;
+    padding-top: 65px;
+}
+
+.my-section {
+    padding-top: 65px;
+}
+
+.color-box {
+    background-color: blue;
+}
+
+.my-hero {
+    font-family: Georgia;
+    color: white;
+    font-size: 2.0rem;
+    font-style: italic;
+    font-weight: 300;
+    padding-bottom: 2rem;
+}
+
+.my-section-title {
+    text-transform: uppercase;
+}
+
+.minicard-summary {
+    font-size: .85rem;
+}

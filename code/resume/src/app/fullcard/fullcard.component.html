@@ -1,0 +1,90 @@
+<!-- fullCard -->
+<div *ngIf="fullCard">
+    <div *ngFor="let card of fullCard">
+        <div class="border border-primary px-2 pt-1 pb-3 mb-3">
+            <!-- TITLE  -->
+            <div class=" my-0 py-0 px-2">
+                <div class="row">
+                    <div class="col-md mt-2">
+                        <h5 class="card-title">{{card.title}}</h5>
+                    </div>
+                    <div class="col-md text-right mt-2" *ngIf="card.rating">
+                        <div class="progress" style="height: 20px;">
+                            <div class="progress-bar bg-success progress-bar-striped" role="progressbar" style.width="{{card.rating}}%" attr.aria-valuenow="{{card.rating}}" aria-valuemin="0" aria-valuemax="100">{{card.rating}}</div>
+                        </div>
+                    </div>
+                    <div class="col-md text-right mt-2" *ngIf="card.titleRight">
+                        <small class="d-inline text-muted"> {{card.titleRight.title}} :</small>
+                        <small class="d-inline"> {{card.titleRight.value}} </small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dropdown-divider"></div>
+
+            <!-- summary -->
+            <p class="card-text px-2" *ngIf="card.summary">
+                {{card.summary}}
+            </p>
+
+            <!-- miniCard -->
+            <div *ngIf="card.miniCard" class="row justify-content-md-center">
+                <div class="col my-2 mx-0" *ngFor="let miniCard of card.miniCard">
+
+                    <div class="card h-100 p-0 m-0" style="min-width: 16rem;">
+                        <div class="card-body">
+                            <div class=" card-title row ">
+                                <div class="col">
+                                    <h6>{{miniCard.title}}</h6>
+                                </div>
+                                <div class="col" *ngIf="miniCard.rating">
+                                    <div class=" progress">
+                                        <div class="progress-bar bg-success " role="progressbar" style.width="{{miniCard.rating}}%" attr.aria-valuenow="{{miniCard.rating}}" aria-valuemin="0" aria-valuemax="100">{{miniCard.rating}}</div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="card-subtitle mb-2" *ngIf="miniCard.subTitle">
+                                <h6 class="text-muted "> {{miniCard.subTitle}} </h6>
+                            </div>
+
+                            <div class="dropdown-divider"></div>
+                            <p class="minicard-summary " *ngIf="miniCard.summary">
+                                {{miniCard.summary}}
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="pl-3 pt-3">
+                <app-icon [data]="card.icons"></app-icon>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <div class="full-screen-section">
+    <section class="pt-4 h-100 container" id="{{sectionData.title}}">
+
+        <!-- Hero -->
+<!-- <div class="row h-100">
+    <div class="col-sm-12 my-auto ">
+        <div class="container center">
+            <div class="my-hero text-center">"{{sectionData.hero}}"</div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+</div> -->

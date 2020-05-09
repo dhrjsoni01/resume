@@ -1,0 +1,14 @@
+<section class="my-section " id="{{sectionData.title}}">
+    <div class="container mt-3">
+
+        <!-- Section Title -->
+        <div class="my-section-title" *ngIf="sectionData.title">
+            <h4>{{sectionData.title}}</h4>
+        </div>
+
+        <app-card [data]="sectionData.card"></app-card>
+
+        <app-full-card [data]="sectionData.fullCard"></app-full-card>
+
+    </div>
+</section>

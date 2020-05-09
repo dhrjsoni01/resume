@@ -1,0 +1,13 @@
+<div *ngIf="icons">
+    <div *ngIf="icons.display">
+        <div class="pb-3" *ngFor="let item of icons.display">
+            <i class="d-inline" style="font-size: 1.2rem;" [class]="item.fa_class"></i>
+            <div class="d-inline ml-3">{{item.text}}</div>
+        </div>
+    </div>
+    <div class="row justify-content-center" *ngIf="icons.links">
+        <div class="justify-content-center d-inline m-2 mx-4" *ngFor="let item of icons.links">
+            <a class="d-inline" href="{{item.link}}" style="font-size: 2rem;" [class]="item.fa_class"></a>
+        </div>
+    </div>
+</div>

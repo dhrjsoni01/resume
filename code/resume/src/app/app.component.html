@@ -1,0 +1,12 @@
+<app-navbar></app-navbar>
+<div *ngIf="data">
+    <div *ngIf="data.home">
+        <app-home [data]="data.home"></app-home>
+    </div>
+
+    <div *ngIf="data.sections">
+        <div *ngFor="let sectionData of data.sections">
+            <app-section [data]="sectionData"></app-section>
+        </div>
+    </div>
+</div>

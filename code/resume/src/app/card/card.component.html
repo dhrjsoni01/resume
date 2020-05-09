@@ -1,0 +1,32 @@
+<!-- Card -->
+<div *ngIf="cardData" class="row">
+    <div class="col-md-6 col-sm-12 mt-2 mb-3" *ngFor="let card of cardData">
+        <div class="card h-100">
+            <div class="card-header" *ngIf="card.title || card.titleRight">
+                <div class="row">
+                    <div class="col">
+                        <h5 class="card-title">{{card.title}}</h5>
+                    </div>
+                    <div class="col text-right" *ngIf="card.titleRight">
+                        <small class="d-inline"> {{card.titleRight}} </small>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="card-subtitle mb-2 row">
+                    <div class="col">
+                        <h6 class="d-inline text-muted mr-auto"> {{card.subTitle}} </h6>
+                    </div>
+                    <div class="col text-right text-muted" *ngIf="card.subTitleRiht">
+                        <small class="d-inline"> {{card.subTitleRiht}} </small>
+                    </div>
+                </div>
+                <p class="card-text" *ngIf="card.summary">
+                    {{card.summary}}
+                </p>
+
+                <app-icon [data]="card.icons"></app-icon>
+
+            </div>
+        </div>
+    </div>
