@@ -14,7 +14,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit(): void {
     this.dataService.getData().subscribe(data=>{
       this.data = data
-      console.log(data)
     })
   }
 

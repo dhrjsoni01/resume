@@ -10,6 +10,5 @@ export class FullCardComponent implements OnInit {
     fullCard:any
     constructor() { }
     ngOnInit(): void {
-        console.log(this.fullCard)
     }
 }

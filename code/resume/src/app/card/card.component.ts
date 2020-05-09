@@ -10,6 +10,5 @@ export class CardComponent implements OnInit {
     cardData:any
     constructor() { }
     ngOnInit(): void {
-        console.log(this.cardData)
     }
 }
